@@ -1,0 +1,5 @@
+arrye and object
+
+arrey is a muilt data
+
+a normal veriable can not store more than one contect or data

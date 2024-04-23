@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form action="">
+            <h1 class="text-primary">Sign up</h1>
+            <div class="form-group">
+                <label for="">Username</label>
+                <input id="username" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="">Email</label>
+                <input id="email" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="">Password</label>
+                <input id="password" class="form-control" type="password">
+            </div>
+            <div>
+                <button onclick="signupp(event)" class="btn btn-primary">Sign up</button>
+            </div>
+        </form>
+        <div>
+            <span>Already have an account?</span>
+            <button onclick="goLogin()" class="btn btn-success">Login</button>
+        </div>
+    </main>
+</body>
+</html>
+
+<script>
+    let usernames = document.getElementById("username")
+    let emails = document.getElementById("email")
+    let passwords = document.getElementById("password")
+
+    function signupp(ev){
+        ev.preventDefault()
+        let user = {
+            username: username.value,
+            email: email.value,
+            password: password.value,
+        }
+        localStorage.setItem("loggedUser", JSON.stringify(user))
+        window.location.href = "hey.html"
+    }
+    function goLogin(){
+        window.location.href = "hey.html"
+    }
+</script>

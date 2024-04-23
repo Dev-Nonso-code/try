@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../icofont/icofont.min.css">
+    <title>Document</title>
+    <style>
+        .color{
+            background-color: teal;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>My Blogs will show here</h1>
+        <div id="blog"></div>
+    </main>
+</body>
+</html>
+
+<script>
+    let fetchedBlog = JSON.parse(localStorage.getItem("thePost"))
+    console.log(fetchedBlog);
+    let blog = document.getElementById("blog");
+    fetchedBlog.forEach((element)=>{
+        blog.innerHTML +=`
+            <h6>${element.author}</h6>
+            <h4>${element.title}</h4>
+            <h1>${element.postee}</h1>
+        `
+        if(element.isLike == false){
+            blog.innerHTML +=`
+            <div>
+                <button onclick="likeIt(this, '${element.id}')">
+                    <i class="icofont-heart"></i>
+                </button>
+                <button class='btn btn-danger'>
+                    &times;
+                </button>
+            </div>
+            <hr>
+            `
+        }else{
+            blog.innerHTML +=`
+            <div>
+                <button onclick="likeIt(this, '${element.id}')" class='color'>
+                    <i class="icofont-heart"></i>
+                </button>
+                <button class='btn btn-danger'>
+                    &times;
+                </button>
+            </div>
+            <hr>
+            `
+        }
+    })
+
+    function likeIt(dan, el){
+        console.log(dan, el);
+        let savingLike = fetchedBlog.find((tinz)=> tinz.id == el)
+        console.log(savingLike);
+        if(dan.classList.contains("color")){
+            dan.classList.remove("color")
+            savingLike.isLike = false;
+            localStorage.setItem("thePost", JSON.stringify(fetchedBlog))
+        }else{
+            dan.classList.add("color")
+            savingLike.isLike = true;
+            localStorage.setItem("thePost", JSON.stringify(fetchedBlog))
+        }
+    }
+</script>

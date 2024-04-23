@@ -1,0 +1,616 @@
+
+//SIGN UP
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN-UP</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- <style>
+        @media (max-width: 500px){
+            #img_con{
+                display: none;
+            }
+            .name2{
+                display: block;
+            }
+            main{
+                position: relative;
+                left: -20px;
+            }
+        }
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: orange;
+        }
+        main{
+            background-color: aqua;
+            width: 50%;
+            height: 60vh;
+            margin: auto;
+            display: flex;
+            position: relative;
+            top: 15vh;
+            box-shadow: 14px 10px 23px 3px rgba(0,0,0,0.75);
+        }
+        img{
+            width: 100%;
+            height: 60vh;
+        }
+        #img_con{
+            width: 70%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(https://img.freepik.com/free-photo/business-desktop-with-office-elements_23-2148194740.jpg);
+            background-color: rgba(0, 0, 0, 0.607);
+        }
+        #info_con{
+            position: relative;
+            top: -2.6vh;
+            background-color: rgba(0, 0, 0, 0.76);
+            height: 60vh;
+        }
+        .name{
+            color: orange;
+            position: relative;
+            width: fit-content;
+            left: 2vh;
+        }
+        .tag_{
+            position: relative;
+            top: 10vh;
+            left: 10vh;
+            font-size: 25px;
+            width: 155px;
+            color: white;
+        }
+        #form_con{
+            background-color: white;
+        }
+        #abt{
+            position: relative;
+            top: 20vh;
+            left: 30vh;
+            height: 5vh;
+            border: none;
+            background-color: white;
+            cursor: pointer;
+        }
+        #form_div{
+            position: relative;
+            top: 40px;
+            padding: 15px;
+            height: 40vh;
+            /* background-color: aqua; */
+            display: flex;
+            flex-direction: column;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        #sub{
+            width: 25vh;
+            height: 95px;
+            background-color: orange;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input{
+            border: none;
+            border-bottom: 1px solid black;
+        }
+        input:focus{
+            outline: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 12px;
+            transition: 1.5s;
+            width: 170px;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .name2{
+            display: none;
+        }
+    </style>
+</head> -->
+<body>
+    <!-- <main>
+        <section id="img_con">
+            <div id="info_con">
+                <p class="name">TikBlog</p>
+                
+                <p class="tag_">Your One Way to share daily information</p>
+                <button id="abt">About Us         ></button>
+            </div>
+        </section>
+        <section id="form_con">
+            <div id="form_div">
+                <p class="name2">TikBlog</p>
+                <p>Sign Up to experience the most efficient way of Entertainment</p>
+                <form action="">
+                    <input required id="full_name" placeholder="Full Name" type="text"><br>
+                    <input required id="user" placeholder="Username" type="text"><br>
+                    <input required id="pass1" placeholder="Password" type="password"><br>
+                    <input required id="pass2" placeholder="Repeat Password" type="password"><br>
+                </form>
+                <button  id="sub">Let's Go        ></button>
+                <a href="login.html">already have an account?</a>
+            </div>
+        </section>
+    </main> -->
+
+    <section class="vh-100" style="background-color: #eee;">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-lg-12 col-xl-11">
+            <div class="card text-black" style="border-radius: 25px;">
+              <div class="card-body p-md-5">
+                <div class="row justify-content-center">
+                  <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+    
+                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+    
+                    <form class="mx-1 mx-md-4">
+    
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="text" id="full_name" class="form-control" />
+                          <label class="form-label" for="full_name">Your Name</label>
+                        </div>
+                      </div>
+    
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="email" id="user" class="form-control" />
+                          <label class="form-label" for="user">Your Email</label>
+                        </div>
+                      </div>
+    
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="password" id="pass1" class="form-control" />
+                          <label class="form-label" for="pass1">Password</label>
+                        </div>
+                      </div>
+    
+                      <div class="d-flex flex-row align-items-center mb-4">
+                        <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="password" id="pass2" class="form-control" />
+                          <label class="form-label" for="pass2">Repeat your password</label>
+                        </div>
+                      </div>
+    
+                      <div class="form-check d-flex justify-content-center mb-5">
+                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                        <label class="form-check-label" for="form2Example3">
+                          I agree all statements in <a href="#!">Terms of service</a>
+                        </label>
+                      </div>
+    
+                      <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                        <button id="sub" type="button" class="btn btn-primary btn-lg">Register</button>
+                      </div>
+    
+                    </form>
+    
+                  </div>
+                  <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+    
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                      class="img-fluid" alt="Sample image">
+    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</body>
+<!-- MDB -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script>
+    let nam = document.querySelector('#full_name');
+    let username = document.querySelector('#user');
+    let firstpass = document.querySelector('#pass1');
+    let secondpass = document.querySelector('#pass2');
+    let mit = document.querySelector('#sub');
+
+    let data = 
+        {
+            Full_Name : '',
+            Username  : '',
+            password1 : '',
+            password2 : ''
+    }
+
+    mit.addEventListener('click', change)
+    function change(){
+        if (firstpass.value == '' || secondpass.value == ''){
+            alert('Please Fill both Passwords fields!')
+        }else if(firstpass.value == secondpass.value){
+            // alert('testing');
+            
+                data.Full_Name = nam.value
+                data.Username = username.value
+                data.password1 = firstpass.value
+                data.password2 = secondpass.value
+            console.log(data)
+            localStorage.setItem('Userss',JSON.stringify(data))
+            console.log(data)
+            window.location.href = 'index.html'
+        }else{
+            alert('Your Passwords must be the same')
+        }
+        // alert('Hello World')
+    }
+</script>
+</html>
+
+// LOGIN
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG-IN</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- <style>
+        body{
+            background-color: orange;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        h1{
+            color: orange;
+        }
+        input{
+            height: 4vh;
+        }
+        main{
+            background-color: aliceblue;
+            width: 30%;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 14px 10px 23px 3px rgba(0,0,0,0.75);
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        button{
+            background-color: orange;
+            border: none;
+            width: 20vh;
+            height: 7vh;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .5s;
+        }
+        button:hover{
+            background-color: rgba(255, 166, 0, 0.607);
+        }
+    </style> -->
+</head>
+<body>
+    <!-- <main>
+        <h1>TikBlog</h1>
+        <form action="">
+            <label for="user">Enter Username</label>
+            <input name="user" type="text" id="username"><br>
+            <label for="passd">Enter Your Password</label>
+            <input type="password" name="passd" id="password"><br>
+        </form>
+        <button id="ent">LOGIN</button>
+    </main> -->
+
+    <section class="vh-100">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6 text-black">
+      
+              <div class="px-5 ms-xl-4">
+                <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+                <span class="h1 fw-bold mb-0">TIKBLOG</span>
+              </div>
+      
+              <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+      
+                <form style="width: 23rem;">
+      
+                  <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+      
+                  <div class="form-outline mb-4">
+                    <input type="email" id="username" class="form-control form-control-lg" />
+                    <label class="form-label" for="username">Email address</label>
+                  </div>
+      
+                  <div class="form-outline mb-4">
+                    <input type="password" id="password" class="form-control form-control-lg" />
+                    <label class="form-label" for="password">Password</label>
+                  </div>
+      
+                  <div class="pt-1 mb-4">
+                    <button id="ent" class="btn btn-info btn-lg btn-block" type="button">Login</button>
+                  </div>
+      
+                  <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+                  <p>Don't have an account? <a href="sign.html" class="link-info">Register here</a></p>
+      
+                </form>
+      
+              </div>
+      
+            </div>
+            <div class="col-sm-6 px-0 d-none d-sm-block">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img3.webp"
+                alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+    
+</body>
+<script>
+    let  User = document.querySelector('#username');
+    let  psd = document.querySelector('#password');
+    let enter = document.querySelector('#ent');
+    let seek = JSON.parse(localStorage.getItem('Userss'))
+
+    enter.addEventListener('click', ter)
+    function ter(){
+        if(seek.Username == User.value && seek.password1 == psd.value){
+            window.location.href = 'dashboard.html'
+        }else{
+            alert('User not found, Please Sign Up')
+        }
+    }
+</script>
+</html>
+
+
+
+//DASHBOARD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <!-- <h1 id="header"></h1> -->
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a id="header" class="nav-link disabled">Disabled</a>
+          </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li> -->
+      </ul>
+      <h1>What do you want to do today? <span class="badge bg-secondary"></span></h1>
+      <div  id="bby" class="card" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1585336261022-680e295ce3fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cGVufGVufDB8fDB8fA%3D%3D&w=1000&q=80" class="card-img-top" alt="...">
+        <div  class="card-body">
+          <!-- <h5 class="card-title">Write Blog</h5> -->
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          <a href="#" class="btn btn-primary">Write Blog</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="data:image/png;base64,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" class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- <h5 class="card-title">Write Blog</h5> -->
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          <a href="#" class="btn btn-primary">View Blogs</a>
+        </div>
+      </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script>
+    let tty = document.querySelector('title')
+    let scrren = document.querySelector('#header')
+    let xyz = document.querySelector('#bby')
+
+    xyz.style.cursor = 'pointer'
+
+    xyz.addEventListener('click', see)
+
+    function see(){
+      alert('hee')
+      window.location.href = "write.html"
+    }
+
+    let store = JSON.parse(localStorage.getItem('Userss'))
+    
+
+    scrren.innerHTML = `<h1> Hello, ${store.Full_Name}`
+    tty.innerText = `DashBoard - ${store.Username}`
+</script>
+</html>
+
+
+
+
+//WRITE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 80px;
+        }
+        #load,#afterload{
+            display: none;
+        }
+        textarea{
+            height: 250px;
+        }
+    </style>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+  />
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+
+</head>
+<body class="bg-white">
+    <h1>Enter Your Gist here!</h1>
+    <div class="form-outline">
+        <textarea value="gggghhhhhh" id="xyz" class=" bg-primary form-control" id="textAreaExample" rows="4"></textarea>
+        <label class="form-label" for="textAreaExample">Message</label>
+      </div>
+      <input id="sub" type="button" value="Post to Blog">
+
+      <div id="load" >
+        <img src="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca_w200.gif" alt="">
+      </div>
+
+      <div id="afterload">
+        <p>Your Blog has been published <a href="blog.html" class="link-info">click here to view</a></p>
+      </div>
+    
+
+      <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+    <script>
+        let xxy = document.querySelector('#xyz')
+        let post = document.querySelector('#sub')
+
+        let blogcontent = {
+            content: ''
+        }
+
+        post.addEventListener('click', function(e){
+            if (xxy.value == ''){
+                alert('Invalid Input')
+            }else{
+                document.querySelector('#afterload').style.display = 'none';
+
+                document.querySelector('#load').style.display = 'block';
+
+                setTimeout(suu, 2500)
+
+e.preventDefault();
+            }   
+        })
+        function suu(){
+            
+                console.log(xxy.value)
+            blogcontent.content = xxy.value
+
+            localStorage.setItem('bloginfo', JSON.stringify(blogcontent));
+
+            document.querySelector('#afterload').style.display = 'block';
+
+            document.querySelector('#load').style.display = 'none';
+        
+
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+//BLOG
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+  />
+  <link rel="stylesheet" href="css/mdb.min.css" />
+</head>
+<body class="bg-primary" >
+    
+    <main>
+        <div id="show_blog"></div>
+        <div></div>
+    </main>
+    
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+</body>
+<script>
+    let screen = document.querySelector('#show_blog')
+    let stock = JSON.parse(localStorage.getItem('bloginfo'))
+
+    screen.innerHTML = stock.content
+</script>
+</html>

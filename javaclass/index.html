@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="d-flex justify-content-between">
+        <div>
+            <h1>Welcome to Dashboard!!!</h1>
+        </div>
+        <div>
+            <button onclick="logout()" class="btn btn-danger">Logout</button>
+        </div>
+    </div>
+
+    <main>
+        <form action="">
+            <h1>Post a Blog</h1>
+            <div class="form-group">
+                <label for="">Author</label>
+                <input id="author" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="">Title</label>
+                <input id="title" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="">Image</label>
+                <input onchange="errmm(event)" class="form-control" type="file">
+            </div>
+            <div class="form-group">
+                <label for="">Post</label>
+                <textarea class="form-control" name="" id="post" cols="30" rows="10"></textarea>
+            </div>
+            
+            <div>
+                <button class="btn btn-info" onclick="postt(event)">Post</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
+
+<script>
+    let currentUser = localStorage.getItem("loggedUser")
+    console.log(currentUser);
+    if(!currentUser){
+        window.location.href = "hey.html"
+    }
+    let reader = new FileReader()
+    function errmm(ev){
+        ev.preventDefault();
+        let file = ev.target;
+        console.log(reader.file);
+        console.log(file);
+    }
+
+    function logout(){
+        localStorage.removeItem("loggedUser");
+        window.location.href = "hey.html"
+    }
+
+    let fetchedBlog = JSON.parse(localStorage.getItem("thePost"))
+    console.log(fetchedBlog);
+    let author = document.getElementById("author")
+    let title = document.getElementById("title")
+    let postted = document.getElementById("post");
+    // let allPost = [];
+    function postt(ev){
+        ev.preventDefault()
+        let myPost = {
+            id: null,
+            author: author.value,
+            title: title.value,
+            postee: postted.value,
+            isLike: false
+        }
+        if(fetchedBlog == null){
+            fetchedBlog = [];
+            myPost.id = fetchedBlog.length+1
+            fetchedBlog.push(myPost)
+            localStorage.setItem("thePost", JSON.stringify(fetchedBlog));
+            window.location.href = "viewBlogs.html"
+        }else{
+            myPost.id = fetchedBlog.length+1
+            fetchedBlog.push(myPost)
+            localStorage.setItem("thePost", JSON.stringify(fetchedBlog));
+            window.location.href = "viewBlogs.html"
+        }
+        
+    }
+</script>

@@ -1,0 +1,14 @@
+npm i express bcryptjs jsonwebtoken mongoose body-parser nodemon dotenv cloudinary nodemailer socket.io yup cors
+
+a collection is a  group of table
+
+npm i axios    inside react
+
+npm i cors      inside node
+
+
+react : npm i react-router-dom
+
+npx create-react-app 
+
+npm run dev   =--- for reactnoe to start sever                                                                                                                                 
